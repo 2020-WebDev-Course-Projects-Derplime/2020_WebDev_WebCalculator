@@ -1,0 +1,25 @@
+{
+  "name": "2020_webdev_webcalculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Derplime/2020_WebDev_WebCalculator.git"
+  },
+  "author": "Derplime",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Derplime/2020_WebDev_WebCalculator/issues"
+  },
+  "homepage": "https://github.com/Derplime/2020_WebDev_WebCalculator#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
