@@ -1,13 +1,26 @@
 //@ts-check
 
 const express = require("express");
-
 const app = express();
 
-app.get("/", function(req, res) {
-    res.send("Hello World!");
+app.use(express.urlencoded({
+    extended: true
+}));
+
+app.get("/", function (req, res) {
+    res.sendFile(__dirname + "/index.html");
 });
 
-app.listen(3000, function() {
+app.post("/", function (req, res) {
+
+    // Deconstucting of body, make sure you use the name attribute.
+    const { num1, num2 } = req.body;
+
+    let result = (Number(num1) + Number(num2));
+
+    res.send(`Thanks for posting that brah. The result of your addition is ${result}.`);
+});
+
+app.listen(3000, function () {
     console.log(`Express server running on port 3000`);
 });
